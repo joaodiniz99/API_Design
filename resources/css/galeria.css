@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(80, 135, 160);
+}
+
+.container-fluid h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.container-fluid #tituloCao {
+  border-bottom: 5px solid rgb(115, 193, 230);
+}
+
+#nomeCao {
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid black;
+  transition: color 0.2s, border 0.2s;
+}
+
+#nomeCao:focus {
+  outline: none;
+  color: #17a2b8;
+  border: 2px solid #17a2b8;
+}
+
+#btnCao {
+  padding: 10px;
+  border-radius: 55%;
+}
+
+#btnCao span {
+  font-size: 1rem;
+}

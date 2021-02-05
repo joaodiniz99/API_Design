@@ -32,19 +32,21 @@ form {
 
 /* Animações */
 .floating {   
-    animation: float 5s ease-in-out infinite;
-    margin: 0 auto;
-    width: 300px;
-    border-radius: 55px; 
+  animation: float 5s ease-in-out infinite;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 55px; 
 } 
 
 .floating2 {
   animation: float2 5s ease-in-out infinite;
-  margin: 2rem auto;
   width: 300px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 55px; 
 }
-  
+
 @keyframes floating { 
     0% { transform: translate(0,  0px); } 
     50%  { transform: translate(0, 15px); } 
@@ -58,8 +60,8 @@ form {
   }
 
   50% {
-    transform: translateY(2rem);
-    -webkit-transform: translateY(2rem);
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
   }
 
   100% {
@@ -83,4 +85,11 @@ form {
     transform: translateY(5rem);
     -webkit-transform: translateY(5rem);
   }
+}
+
+@media only screen and (max-width: 1080px) {
+ .floating,
+ .floating2 {
+   display: none;
+ }
 }

@@ -16,9 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/style.css">
     <link rel="stylesheet" href="./resources/css/galeria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light" id="btnTopNav" style="background-color: #e3f2fd;">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">
           <img src="./resources/img/logo.png" alt="" width="70" height="70">
@@ -60,44 +61,10 @@
         </div>
       </div>
       <div class="row" id="content">
-        <!-- <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/doberman.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10009.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10036.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10070.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10647.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_1073.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/doberman.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10009.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10036.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10070.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_10647.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center">
-          <img src="https://images.dog.ceo/breeds/doberman/n02107142_1073.jpg" class="img-fluid" alt="">
-        </div>
-      </div> -->
     </div>
+    <a href="#btnTopNav" id="btnTop" title="Go to top">
+      <i class="fas fa-arrow-up fa-2x"></i>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     <script>
@@ -124,7 +91,7 @@
               // console.log(imagem)
               count++;
               const div = document.createElement("div");
-              div.className = "col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center";
+              div.className = "col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center imagesDiv";
               const img = document.createElement("img");
               img.src = imagem;
               img.className = "img-fluid";
@@ -152,6 +119,21 @@
           alert("O nome não pode estar vazio");
         }
       });
+
+
+      /* BACK TO TOP */
+      const botao = document.getElementById("btnTop");
+
+      window.onscroll = () => {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+          botao.style.display = "block";
+        } else {
+          botao.style.display = "none";
+        }
+      }
+
     </script>
   </body>
 </html>

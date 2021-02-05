@@ -72,6 +72,13 @@
       const entrada = document.getElementById("nomeCao"); // input
       const btnCao = document.getElementById("btnCao"); // botao
       const tituloCao = document.getElementById("tituloCao"); // titulo
+
+      Notiflix.Loading.Init({ 
+        backgroundColor:"rgb(68, 116, 138)",
+        svgColor:"#17a2b8",
+        fontFamily:"Roboto",
+        useGoogleFont:true, 
+      }); 
       
       const mostrarCaes = async (nome) => {
         const nomeTransformado = nome.split(" ").join("").toLowerCase(); // nome sem espaços e em letra minúscula, exemplo: "German Sheperd" para "germanshepherd" para a pesquisa ser feita corretamente na api

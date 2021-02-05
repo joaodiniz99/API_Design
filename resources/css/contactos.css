@@ -33,9 +33,17 @@ form {
 /* Animações */
 .floating {   
     animation: float 5s ease-in-out infinite;
-    margin-left: 30px; 
-    margin-top: 5px; 
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 55px; 
 } 
+
+.floating2 {
+  animation: float2 5s ease-in-out infinite;
+  margin: 2rem auto;
+  width: 300px;
+  border-radius: 55px; 
+}
   
 @keyframes floating { 
     0% { transform: translate(0,  0px); } 
@@ -57,5 +65,22 @@ form {
   100% {
     transform: translateY(0);
     -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+  }
+
+  50% {
+    transform: translateY(10rem);
+    -webkit-transform: translateY(10rem);
+  }
+
+  100% {
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
   }
 }

@@ -11,6 +11,10 @@ body {
   border-bottom: 5px solid rgb(115, 193, 230);
 }
 
+#content {
+  height: 50vh;
+}
+
 .card__breed {
   color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.555);

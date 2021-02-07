@@ -114,9 +114,9 @@
         document.getElementById("dogModalLife").innerText = '';
       })
 
-      Notiflix.Loading.Init({ 
-        backgroundColor:"rgb(68, 116, 138)",
-        svgColor:"#17a2b8",
+      Notiflix.Block.Init({ 
+        backgroundColor:"rgba(0,0,0,0)",
+        svgColor:"#ffffff",
         fontFamily:"Roboto",
         useGoogleFont:true, 
       }); 
@@ -124,7 +124,7 @@
       const mostrarRacas = async () => {
         const apiKey = 'edd5e545-28ef-42f8-8a57-55ffd77d22c7';
         const url = 'https://api.thedogapi.com/v1/breeds';
-        Notiflix.Loading.Pulse("A carregar...");
+        Notiflix.Block.Pulse("div#content");
         try {
           const response = await fetch(url, {
             headers: {
@@ -181,10 +181,10 @@
             for (const botao of btnInfo) {
               botao.addEventListener("click", atualizarModal);
             }
-            Notiflix.Loading.Remove();
+            Notiflix.Block.Remove("div#content");
           }
         } catch(err) {
-          Notiflix.Loading.Remove();
+          Notiflix.Block.Remove("div#content");
           alert("erro, verificar consola!");
           console.log(err);
         }

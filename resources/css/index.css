@@ -30,6 +30,8 @@
 .hero h1 {
   /* Text styles */
   font-size: 5em;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
 
   /* Margins */
   margin-top: 0;

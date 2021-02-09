@@ -10,6 +10,9 @@ body {
 
 .navbar-brand {
   color: #4d7682 !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .nav-item {
@@ -18,6 +21,7 @@ body {
 
 .nav-link {
   color: #476e79 !important;
+  font-family: 'Roboto', sans-serif;
   border: 1px solid #476e79;
   border-radius: 20px;
   padding: 4px 16px !important;
